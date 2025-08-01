@@ -6,6 +6,7 @@
     <title>AIドクター For Vets - 獣医師向けAI情報検索サービス</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -14,16 +15,36 @@
         }
         .icon {
             font-size: 3rem;
+            color: #4a90e2;
+        }
+        .main-icon {
+            font-size: 4rem;
             color: #1c2d43;
+        }
+        .hero-bg {
+            background-image: linear-gradient(135deg, #1f2937 0%, #064e3b 100%);
+        }
+        .hero-title-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        /* Style for the arrow icon */
+        .arrow-icon {
+            color: #1c2d43;
+        }
+        @media (max-width: 767px) {
+            .arrow-icon {
+                transform: rotate(90deg);
+                margin: 1rem 0;
+            }
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="bg-[#1c2d43] text-white py-16 px-4 md:px-8 lg:px-16 flex flex-col items-center text-center">
+    <header class="hero-bg text-white py-16 px-4 md:px-8 lg:px-16 flex flex-col items-center text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 hero-title-shadow">
                 獣医療の情報の海から、たった1秒で答えを。
             </h1>
             <p class="text-lg sm:text-xl font-light mb-8">
@@ -49,6 +70,91 @@
 
     <main class="container mx-auto px-4 py-16 md:px-8 lg:px-16">
 
+        <!-- Solution Categories Section -->
+        <section id="categories" class="mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-[#1c2d43]">
+                あらゆる獣医師の専門分野に対応
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-12">
+                内科、外科、救急診療から、専門性の高い分野まで。<br>
+                **AIドクター For Vets**は、あらゆる獣医師の課題解決をサポートします。
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Category 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">内科・外科・救急</h3>
+                    <p class="text-gray-600 mt-2">健康診断から緊急対応まで、幅広い症例に対応。</p>
+                </div>
+                <!-- Category 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">循環器・消化器・呼吸器</h3>
+                    <p class="text-gray-600 mt-2">専門性の高い分野の最新情報を瞬時に検索。</p>
+                </div>
+                <!-- Category 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">神経・腫瘍・整形外科</h3>
+                    <p class="text-gray-600 mt-2">診断が難しい症例の鑑別診断や治療方針をサポート。</p>
+                </div>
+                <!-- Category 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-microscope"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">画像診断・病理・検査</h3>
+                    <p class="text-gray-600 mt-2">検査結果の解釈や病理医への質問内容を生成。</p>
+                </div>
+                <!-- Category 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-pills"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">薬理学・栄養学</h3>
+                    <p class="text-gray-600 mt-2">薬の用量調整や食事療法の選択肢を提案。</p>
+                </div>
+                <!-- Category 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
+                    <div class="icon mb-4"><i class="fa-solid fa-paw"></i></div>
+                    <h3 class="font-bold text-xl text-[#1c2d43]">行動療法・カウンセリング</h3>
+                    <p class="text-gray-600 mt-2">飼い主様への説明や治療プランの作成をサポート。</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-center mt-16 mb-8 text-[#1c2d43]">
+                解決できる質問例
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-dog"></i></div>
+                    <p class="text-gray-600">健康診断で肝酵素が高い無症状の犬における、追加検査の必要性と食事・サプリメントは？</p>
+                </div>
+                <!-- Question 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-cat"></i></div>
+                    <p class="text-gray-600">慢性的な血尿と頻尿の若い猫における、鑑別診断と再発予防策の提案方法は？</p>
+                </div>
+                <!-- Question 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+                    <p class="text-gray-600">痙攣発作を起こした猫における、中毒やてんかん以外の鑑別診断と緊急処置手順は？</p>
+                </div>
+                <!-- Question 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-fire"></i></div>
+                    <p class="text-gray-600">重度の熱中症の犬における、初期の冷却手順と多臓器不全を防ぐ管理方法は？</p>
+                </div>
+                <!-- Question 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-bone"></i></div>
+                    <p class="text-gray-600">跛行があるがX線異常がない大型犬における、鑑別診断と診断に必要な検査は？</p>
+                </div>
+                <!-- Question 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
+                    <div class="main-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <p class="text-gray-600">ペットの最期を考えられない飼い主における、どのような言葉で心の準備をサポートすべきか？</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Pain Points Section -->
         <section id="pain-points" class="mb-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#1c2d43]">
@@ -56,15 +162,15 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="text-4xl text-center mb-4">⏳</div>
+                    <div class="main-icon text-center mb-4"><i class="fa-solid fa-clock"></i></div>
                     <p class="text-gray-600 text-center">膨大な論文や書籍を調べる手間が、日々の診療を圧迫している。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="text-4xl text-center mb-4">🧐</div>
+                    <div class="main-icon text-center mb-4"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
                     <p class="text-gray-600 text-center">ネット検索やChatGPTでは、情報の信頼性を判断するのが難しい。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="text-4xl text-center mb-4">👥</div>
+                    <div class="main-icon text-center mb-4"><i class="fa-solid fa-users"></i></div>
                     <p class="text-gray-600 text-center">スタッフ間での情報格差が、病院全体の診療レベルに影響を与えている。</p>
                 </div>
             </div>
@@ -78,31 +184,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-user-doctor"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">獣医師監修の信頼性</h3>
                     <p class="text-gray-600">A'alda所属の40名以上の獣医師が監修。現場の視点を反映した、実践的な情報を提供します。</p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-award"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">世界的権威のお墨付き</h3>
                     <p class="text-gray-600">獣医療の世界的権威を持つ獣医師からお墨付きをいただき、その知見も学習データに反映されています。</p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-file-invoice"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">明確な情報ソース</h3>
                     <p class="text-gray-600">Google検索とは異なり、SEOに左右されない医学論文や獣医ガイドラインなど、信頼できる情報ソースを明示します。</p>
                 </div>
                 <!-- Feature 4 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-database"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">圧倒的な学習データ量</h3>
                     <p class="text-gray-600">2,800万件近くの医学論文や書籍を学習。膨大なデータから、最適な回答を素早く導き出します。</p>
                 </div>
                 <!-- Feature 5 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-clinic-medical"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">獣医療視点の開発</h3>
                     <p class="text-gray-600">42病院を運営するA'aldaが、日々の診療現場で本当に役立つAIとして開発しました。</p>
                 </div>
                 <!-- Feature 6 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-shield-halved"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">ハルシネーション対策済み</h3>
                     <p class="text-gray-600">嘘を言わないAIのため、ハルシネーション（AIの幻覚）対策が不要で、安心して利用できます。</p>
                 </div>
@@ -112,23 +224,28 @@
         <!-- How to Use Section -->
         <section id="how-to-use" class="mb-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#1c2d43]">
-                **AIドクター For Vets**の簡単な使い方
+                **AIドクター For Vets**の簡単な使い方<br>
+                <span class="text-lg font-normal">たった10秒で、信頼できる回答が得られます。</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
                 <!-- Step 1 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200 w-full md:w-1/3">
                     <div class="mb-4 text-4xl text-[#1c2d43] font-bold bg-[#4a90e2] text-white inline-block w-12 h-12 rounded-full leading-[48px]">1</div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">質問を入力</h3>
                     <p class="text-gray-600">聞きたいこと、知りたいことをチャット形式で入力するだけ。複雑な操作は一切不要です。</p>
                 </div>
+                <div class="arrow-icon hidden md:block text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="arrow-icon block md:hidden text-4xl"><i class="fa-solid fa-arrow-down"></i></div>
                 <!-- Step 2 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200 w-full md:w-1/3">
                     <div class="mb-4 text-4xl text-[#1c2d43] font-bold bg-[#4a90e2] text-white inline-block w-12 h-12 rounded-full leading-[48px]">2</div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">根拠と共に回答生成</h3>
                     <p class="text-gray-600">AIが学習データから最適な回答を生成し、参照した論文やガイドラインも提示します。</p>
                 </div>
+                <div class="arrow-icon hidden md:block text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="arrow-icon block md:hidden text-4xl"><i class="fa-solid fa-arrow-down"></i></div>
                 <!-- Step 3 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200 w-full md:w-1/3">
                     <div class="mb-4 text-4xl text-[#1c2d43] font-bold bg-[#4a90e2] text-white inline-block w-12 h-12 rounded-full leading-[48px]">3</div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">診療に活用</h3>
                     <p class="text-gray-600">得られた情報を日々の診療や飼い主様への説明に活用し、業務効率を大幅に向上させます。</p>
@@ -149,130 +266,31 @@
             </div>
         </section>
 
-        <!-- Solution Categories Section -->
-        <section id="categories" class="mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#1c2d43]">
-                あらゆる診療カテゴリに対応
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Category 1 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">🩺</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">内科・外科・救急</h3>
-                    <p class="text-gray-600 mt-2">健康診断から緊急対応まで、幅広い症例に対応。</p>
-                </div>
-                <!-- Category 2 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">❤️</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">循環器・消化器・呼吸器</h3>
-                    <p class="text-gray-600 mt-2">専門性の高い分野の最新情報を瞬時に検索。</p>
-                </div>
-                <!-- Category 3 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">🧠</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">神経・腫瘍・整形外科</h3>
-                    <p class="text-gray-600 mt-2">診断が難しい症例の鑑別診断や治療方針をサポート。</p>
-                </div>
-                <!-- Category 4 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">🔬</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">画像診断・病理・検査</h3>
-                    <p class="text-gray-600 mt-2">検査結果の解釈や病理医への質問内容を生成。</p>
-                </div>
-                <!-- Category 5 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">💊</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">薬理学・栄養学</h3>
-                    <p class="text-gray-600 mt-2">薬の用量調整や食事療法の選択肢を提案。</p>
-                </div>
-                <!-- Category 6 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200">
-                    <div class="icon mb-4">🐾</div>
-                    <h3 class="font-bold text-xl text-[#1c2d43]">行動療法・カウンセリング</h3>
-                    <p class="text-gray-600 mt-2">飼い主様への説明や治療プランの作成をサポート。</p>
-                </div>
-            </div>
-            
-            <h3 class="text-2xl font-bold text-center mt-16 mb-8 text-[#1c2d43]">
-                解決できる質問例
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Question 1 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">🐶</div>
-                    <p class="text-gray-600">健康診断で肝酵素が高い無症状の犬における、追加検査の必要性と食事・サプリメントは？</p>
-                </div>
-                <!-- Question 2 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">🐱</div>
-                    <p class="text-gray-600">慢性的な血尿と頻尿の若い猫における、鑑別診断と再発予防策の提案方法は？</p>
-                </div>
-                <!-- Question 3 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">🤕</div>
-                    <p class="text-gray-600">痙攣発作を起こした猫における、中毒やてんかん以外の鑑別診断と緊急処置手順は？</p>
-                </div>
-                <!-- Question 4 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">🚨</div>
-                    <p class="text-gray-600">重度の熱中症の犬における、初期の冷却手順と多臓器不全を防ぐ管理方法は？</p>
-                </div>
-                <!-- Question 5 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">🦴</div>
-                    <p class="text-gray-600">跛行があるがX線異常がない大型犬における、鑑別診断と診断に必要な検査は？</p>
-                </div>
-                <!-- Question 6 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex items-center space-x-4">
-                    <div class="text-4xl text-[#1c2d43]">👨‍⚕️</div>
-                    <p class="text-gray-600">ペットの最期を考えられない飼い主における、どのような言葉で心の準備をサポートすべきか？</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Benefits Section -->
         <section id="benefits" class="mb-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#1c2d43]">
-                組織としての成長を、最速で。
+                動物病院の成長を、最速で。
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex flex-col items-center">
-                    <div class="icon mb-4">📈</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-chart-line"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">業務効率の飛躍的向上</h3>
                     <p class="text-gray-600">情報収集の時間を大幅に削減。空いた時間を診療や研究、そしてスタッフ育成に充てられます。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex flex-col items-center">
-                    <div class="icon mb-4">🤝</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-users-line"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">チーム全体の知識を底上げ</h3>
                     <p class="text-gray-600">スタッフ間の情報格差を解消し、誰でも信頼できる情報にアクセス可能。病院全体の診断精度を均質化します。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 flex flex-col items-center">
-                    <div class="icon mb-4">🗣️</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-comments"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">飼い主との対話が変わる</h3>
                     <p class="text-gray-600">根拠に基づいた的確な情報で、飼い主様への説明がよりスムーズに。信頼関係を深め、満足度向上に繋がります。</p>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing & Trial Section -->
-        <section id="trial" class="bg-[#1c2d43] text-white rounded-3xl p-8 md:p-12 lg:p-16 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6">今すぐ、信頼とスピードを体験してください</h2>
-            <p class="text-xl mb-8 font-light">まずは7日間の無料トライアルで、その圧倒的な利便性をお試しください。</p>
-            <div class="bg-white text-[#1c2d43] rounded-2xl p-6 inline-block shadow-2xl mb-8">
-                <p class="text-2xl font-bold mb-2">通常価格：月額 5,500円/人</p>
-                <p class="text-lg text-gray-600">※まとめ割もございます。お気軽にご相談ください。</p>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-[#4a90e2] text-white font-bold py-4 px-12 rounded-full shadow-lg hover:bg-[#357abd] transition duration-300">
-                    無料トライアルに申し込む
-                </a>
-                <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-4 px-12 rounded-full shadow-lg hover:bg-white hover:text-[#1c2d43] transition duration-300">
-                    価格について問い合わせる
-                </a>
-            </div>
-        </section>
-
-        <!-- Functions Section -->
+        <!-- Pricing & Trial Section (moved after functions) -->
         <section id="functions" class="my-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#1c2d43]">
                 主な機能
@@ -280,38 +298,54 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
                 <!-- Existing Function 1 -->
                 <div class="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="mb-4 text-5xl text-[#1c2d43]">🔍</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-magnifying-glass"></i></div>
                     <h3 class="font-bold text-xl mb-2 text-[#1c2d43]">AI検索機能</h3>
                     <p class="text-gray-600">獣医療に関する疑問をAIに問いかけるだけで、信頼性の高い情報がすぐ手元に。</p>
                 </div>
                 <!-- Existing Function 2 -->
                 <div class="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="mb-4 text-5xl text-[#1c2d43]">👨‍🏫</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-book-open-reader"></i></div>
                     <h3 class="font-bold text-xl mb-2 text-[#1c2d43]">患者教育機能</h3>
                     <p class="text-gray-600">飼い主様への説明に役立つ資料を生成。診療時間の短縮と理解度向上に貢献します。</p>
                 </div>
                 <!-- Existing Function 3 -->
                 <div class="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="mb-4 text-5xl text-[#1c2d43]">🤝</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-headset"></i></div>
                     <h3 class="font-bold text-xl mb-2 text-[#1c2d43]">サポートデスク</h3>
                     <p class="text-gray-600">導入後の不明点や活用方法について、専任のスタッフがサポートします。</p>
                 </div>
                 <!-- New Coming Soon Function 1 -->
                 <div class="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 border border-gray-200 relative">
                     <span class="absolute top-2 right-2 bg-[#1c2d43] text-white text-xs font-bold px-2 py-1 rounded-full">Coming Soon</span>
-                    <div class="mb-4 text-5xl text-[#1c2d43]">🤔</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-lightbulb"></i></div>
                     <h3 class="font-bold text-xl mb-2 text-[#1c2d43]">鑑別診断サポート</h3>
                     <p class="text-gray-600">あらゆる診断の可能性をブレインストーミング。次に取るべき検査や治療の方向性を瞬時に提案します。</p>
                 </div>
                 <!-- New Coming Soon Function 2 -->
                 <div class="flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 border border-gray-200 relative">
                     <span class="absolute top-2 right-2 bg-[#1c2d43] text-white text-xs font-bold px-2 py-1 rounded-full">Coming Soon</span>
-                    <div class="mb-4 text-5xl text-[#1c2d43]">📚</div>
+                    <div class="main-icon mb-4"><i class="fa-solid fa-book-medical"></i></div>
                     <h3 class="font-bold text-xl mb-2 text-[#1c2d43]">論文リサーチ</h3>
                     <p class="text-gray-600">PubMed収載2,800万件以上の医学論文を学習。複雑な研究課題の探索を加速させ、研究者の負担を軽減します。</p>
                 </div>
             </div>
         </section>
+
+        <!-- Trial Promotion Section (moved after functions) -->
+        <section id="trial" class="bg-[#4a90e2] text-white rounded-3xl p-8 md:p-12 lg:p-16 text-center my-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">今すぐ、信頼とスピードを体験してください</h2>
+            <p class="text-xl mb-8 font-light">まずは7日間の無料トライアルで、その圧倒的な利便性をお試しください。</p>
+            <div class="bg-white text-[#1c2d43] rounded-2xl p-6 inline-block shadow-2xl mb-8">
+                <p class="text-2xl font-bold mb-2">通常価格：月額 <span class="text-4xl">5,500</span>円/人</p>
+                <p class="text-sm mt-2 text-gray-600">※まとめ割もございます。お気軽にご相談ください。</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-white text-[#1c2d43] font-bold py-4 px-12 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+                    無料トライアルに申し込む
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
