@@ -23,6 +23,43 @@
         }
         .hero-bg {
             background-image: linear-gradient(135deg, #1f2937 0%, #064e3b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            animation: move-grid 20s linear infinite;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.5) 0%, transparent 70%);
+            opacity: 0.3;
+            animation: pulse-light 10s ease-in-out infinite;
+        }
+        @keyframes move-grid {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 20px; }
+        }
+        @keyframes pulse-light {
+            0%, 100% { transform: scale(0.8) translate(50%, 50%); opacity: 0.3; }
+            50% { transform: scale(1.2) translate(50%, 50%); opacity: 0.6; }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
         }
         .hero-title-shadow {
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
@@ -43,9 +80,9 @@
 
     <!-- Hero Section -->
     <header class="hero-bg text-white py-16 px-4 md:px-8 lg:px-16 flex flex-col items-center text-center">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto hero-content">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 hero-title-shadow">
-                獣医療の情報の海から、たった1秒で答えを。
+                獣医療の情報の海から、たった10秒で答えを。
             </h1>
             <p class="text-lg sm:text-xl font-light mb-8">
                 最先端AIが、信頼と根拠だけを最速でお届け。<br>獣医師の診療を加速させる、次世代の**AIドクター For Vets**。
@@ -166,7 +203,7 @@
                     <p class="text-gray-600 text-center">膨大な論文や書籍を調べる手間が、日々の診療を圧迫している。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="main-icon text-center mb-4"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="main-icon text-center mb-4"><i class="fa-solid fa-lightbulb"></i></div>
                     <p class="text-gray-600 text-center">ネット検索やChatGPTでは、情報の信頼性を判断するのが難しい。</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
@@ -214,7 +251,7 @@
                 </div>
                 <!-- Feature 6 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div class="icon mb-3 text-center"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="icon mb-3 text-center"><i class="fa-solid fa-lock"></i></div>
                     <h3 class="font-bold text-xl mb-3 text-[#1c2d43]">ハルシネーション対策済み</h3>
                     <p class="text-gray-600">嘘を言わないAIのため、ハルシネーション（AIの幻覚）対策が不要で、安心して利用できます。</p>
                 </div>
